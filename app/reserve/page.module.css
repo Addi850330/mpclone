@@ -1,0 +1,224 @@
+.contact {
+  padding-top: 30px;
+  padding-left: 60px;
+  /* height: 100vh; */
+}
+.contact .title h1 {
+  font-family: "Poetsen One", sans-serif;
+  font-size: 40px;
+  color: var(--main-color);
+  text-align: center;
+}
+.contact .title p {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.contact form {
+  width: 100%;
+  display: flex;
+
+  flex-wrap: wrap;
+}
+.contact form .step {
+  display: flex;
+  border-bottom: 1px solid var(--stroke-color);
+  width: 75%;
+  margin-top: 20px;
+  align-items: center;
+}
+.contact form .step h3 {
+  font-family: var(--font-roboto);
+  margin-right: 20px;
+  font-weight: 600;
+  font-size: 24px;
+}
+.contact form .step p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.contact form .quest_info {
+  display: flex;
+  margin-top: 30px;
+  width: 100%;
+  padding-right: 70px;
+}
+.contact form .quest_info p {
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 75px;
+}
+.contact form .quest_info span {
+  font-size: 0.6rem;
+  color: var(--sub-color);
+  margin-right: 20px;
+  min-width: 30px;
+}
+.contact form .quest_info .user_quest {
+  border: 1px solid rgba(241, 114, 51, 0.3);
+  width: 100%;
+  resize: none;
+}
+.contact form .quest_info .user_info {
+  height: 1.7rem;
+  width: 100%;
+  border: 1px solid rgba(241, 114, 51, 0.3);
+}
+
+.contact form button {
+  background-color: var(--main-color);
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  font-size: 0.8rem;
+  padding-left: 10px;
+  line-height: 30px;
+  color: var(--text-color-w);
+  font-weight: 600;
+  border-radius: 15px;
+  position: relative;
+  transition: 0.2s;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact form button::after {
+  content: "";
+  background-image: url(/arrow.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: calc(50% - 5px);
+  left: 25px;
+  transition: 0.2s;
+}
+.contact form button:hover {
+  opacity: 0.7;
+}
+.contact form button:hover::after {
+  left: 30px;
+}
+.contact form button.lock {
+  background-color: rgb(147, 147, 147);
+}
+.contact .lockset {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.contact .lockset .reservelock {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  overflow: hidden; /* 限定範圍 */
+  width: 150px;
+  height: 35px;
+  outline: none; /* 避免點選會有藍線或虛線 */
+  background: none;
+  /* background-color: rgb(255, 255, 255); */
+  border: 1px solid var(--main-color);
+  padding: 6px 2px;
+  border-radius: 5px;
+  position: relative;
+}
+.contact .lockset .reservelock.numlock {
+  opacity: 0.5;
+}
+.contact .lockset .reservelock::after {
+  content: "滑動解鎖確認";
+  color: var(--main-color);
+  position: absolute;
+  width: 55%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.contact .lockset .reservelock::before {
+  content: "";
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: url(/icon/lockarrow.svg);
+  background-size: 90% 90%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  animation: 2s lockarrowmove infinite steps(25);
+}
+.contact .lockset .reservelock::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative; /* 設為相對位置，為了前後區塊的絕對位置而設定 */
+  width: 30px;
+  height: 28px;
+  background: var(--sub-color);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.contact .lockset .reservelock::-webkit-slider-runnable-track {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+/* .contact .reservelock::-moz-range-track {
+  background: transparent;
+} */
+@media (max-width: 546px) {
+  .contact form .step h3 {
+    font-size: 20px;
+  }
+  .contact form .step p {
+    font-size: 0.8rem;
+  }
+  .contact form .quest_info .user_quest {
+    height: 120px;
+  }
+  .contact form button {
+    width: 120px;
+  }
+  .contact form button::after {
+    left: 15px;
+  }
+  .contact form button:hover::after {
+    left: 20px;
+  }
+}
+@keyframes lockarrowmove {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  20% {
+    left: calc(150px * (1 / 5));
+    opacity: 0.5;
+  }
+  40% {
+    left: calc(150px * (2 / 5));
+  }
+  60% {
+    left: calc(150px * (3 / 5));
+  }
+  80% {
+    left: calc(150px * (4 / 5));
+  }
+  100% {
+    left: calc(150px);
+    opacity: 0;
+  }
+}

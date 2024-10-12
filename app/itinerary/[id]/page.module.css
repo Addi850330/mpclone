@@ -1,0 +1,184 @@
+.travel {
+  margin: 30px 60px 30px 60px;
+  padding: 30px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--text-color-w);
+  border-radius: 20px;
+  border: 1px solid var(--stroke-color);
+}
+.travel .title h1 {
+  font-family: "Poetsen One", sans-serif;
+  font-size: 40px;
+  color: var(--main-color);
+  text-align: center;
+}
+.travel .title p {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.travel .travel_info {
+  display: flex;
+  width: 100%;
+}
+.travel .travel_info .main_img {
+  width: 100%;
+}
+.travel .travel_info .main_img img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center right;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.travel .travel_info .main_info {
+  flex: 1 0 50%;
+}
+.travel .travel_info .main_info .main_title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+.travel .travel_info .main_info .main_title .mdinner {
+  font-size: 20px;
+  color: var(--sub-color);
+}
+.travel .travel_info .main_info table {
+  width: 100%;
+  margin-top: 10px;
+}
+table .info_desc tr {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+table .info_desc tr th {
+  font-size: 1rem;
+  flex: 0 0 40px;
+  text-align: center;
+  border-bottom: 1px solid var(--stroke-color);
+  padding-bottom: 10px;
+}
+table .info_desc tr td {
+  font-size: 1rem;
+  color: var(--main-color);
+  font-weight: 600;
+  flex: 0 0 220px;
+  text-align: center;
+  border-bottom: 1px solid var(--stroke-color);
+  padding-bottom: 10px;
+}
+.travel .sub_title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.travel .sub_info .spots {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 50px;
+}
+
+.travel .sub_info .spots .spotinfo {
+  flex: 2 1 0%;
+  padding-right: 40px;
+}
+.travel .sub_info .spots .spotinfo .spot_title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.travel .sub_info .spots .spotinfo .spot_desc {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.travel .sub_info .spots .spotimg {
+  flex: 1 0 0%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.travel .sub_info .spots .spotimg img {
+  width: 100%;
+  object-fit: cover;
+}
+.travel .sub_info .spots:nth-child(2) .spotinfo {
+  padding-left: 40px;
+  padding-right: 0;
+}
+.travel .sub_info .spots:nth-child(2) .spotimg {
+  order: -1;
+}
+@media (max-width: 809px) {
+  .travel .travel_info .main_info .main_title {
+    font-size: 20px;
+  }
+  .travel .sub_info .spots .spotinfo {
+    flex-grow: 1;
+    padding-right: 20px;
+  }
+  .travel .sub_info .spots:nth-child(2) .spotinfo {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 705px) {
+  .travel .travel_info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .travel .travel_info .main_img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .travel .travel_info .main_info .main_title {
+    font-size: 24px;
+  }
+
+  table .info_desc tr td {
+    flex-basis: 250px;
+  }
+  .travel .sub_info .spots {
+    flex-direction: column-reverse;
+  }
+  .travel .sub_info .spots .spotinfo {
+    margin-top: 10px;
+    padding-right: 0;
+  }
+  .travel .sub_info .spots:nth-child(2) .spotinfo {
+    padding-left: 0;
+  }
+  .travel .sub_info .spots:nth-child(2) .spotimg {
+    order: 0;
+  }
+}
+@media (max-width: 544px) {
+  .travel {
+    margin: 30px 30px 30px 30px;
+  }
+  .travel .travel_info .main_img {
+    width: 100%;
+  }
+}
+@media (max-width: 454px) {
+  .travel {
+    padding: 30px 10px 30px 10px;
+  }
+  .travel .travel_info .main_info .main_title {
+    font-size: 20px;
+  }
+  table .info_desc tr td {
+    flex-basis: 200px;
+  }
+  .travel .sub_info .spots .spotinfo .spot_title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .travel .sub_info .spots .spotinfo .spot_desc {
+    font-size: 1rem;
+  }
+}

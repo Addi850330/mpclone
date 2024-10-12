@@ -1,0 +1,91 @@
+.quest {
+  padding: 30px 60px 30px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.quest .title h1 {
+  font-family: "Poetsen One", sans-serif;
+  font-size: 40px;
+  color: var(--main-color);
+  text-align: center;
+}
+.quest .title p {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.quest .problems {
+  width: 80%;
+  padding: 20px 40px 40px 40px;
+  border-radius: 20px;
+  background-color: var(--text-color-w);
+}
+.quest .problems .problem {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--text-color-w);
+  border-bottom: 1px solid var(--stroke-color);
+  cursor: pointer;
+  position: relative;
+}
+.quest .problems .problem span {
+  font-family: var(--font-roboto);
+  margin-right: 10px;
+}
+.quest .problems .problem .arrow {
+  pointer-events: none;
+  background-color: var(--text-color-w);
+  background-image: url(/icon/arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+  transform: rotate(180deg);
+  transition: 0.2s;
+}
+.quest .problems .problem .active {
+  transform: rotate(0deg);
+}
+.quest .problems .answer {
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  color: var(--main-color);
+  font-weight: 600;
+  max-height: 0;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+}
+.quest .problems .active {
+  max-height: 250px;
+}
+.quest .problems .answer span {
+  font-family: var(--font-roboto);
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+@media (max-width: 547px) {
+  .quest {
+    padding: 55px 30px;
+  }
+  .quest .problems {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .quest .problems .problem {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 397px) {
+}

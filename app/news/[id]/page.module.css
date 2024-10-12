@@ -1,0 +1,72 @@
+.new {
+  padding: 30px 60px 30px 60px;
+}
+.new .title {
+  margin-bottom: 20px;
+}
+.new .title h1 {
+  font-family: "Poetsen One", sans-serif;
+  font-size: 40px;
+  color: var(--main-color);
+  text-align: center;
+}
+.new .title p {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.new .container {
+  background-color: var(--text-color-w);
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.new .container .new_img {
+  width: 70%;
+
+  margin-bottom: 20px;
+}
+.new .container .new_img img {
+  object-fit: cover;
+}
+.new .container .new_info {
+  width: 70%;
+}
+.new .container .new_info .new_title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.new .container .new_info .new_desc {
+  color: var(--text-color-b);
+}
+.new .container .new_info .new_desc .info_link {
+  display: flex;
+  flex-wrap: wrap;
+
+  word-wrap: break-word;
+}
+.new .container .new_info .new_desc .info_link a {
+  color: var(--sub-color);
+  text-decoration: none;
+  width: 100%;
+}
+@media (max-width: 786px) {
+  .new .container .new_img {
+    width: 95%;
+  }
+  .new .container .new_info {
+    width: 95%;
+  }
+}
+@media (max-width: 477px) {
+  .new {
+    padding: 60px 30px 30px 30px;
+  }
+  .new .container .new_info .new_title {
+    font-size: 1.1rem;
+  }
+  .new .container .new_info .new_desc {
+    font-size: 0.9rem;
+  }
+}
